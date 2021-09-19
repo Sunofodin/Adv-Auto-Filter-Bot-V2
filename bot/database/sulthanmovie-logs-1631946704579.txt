@@ -1,0 +1,10 @@
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:     return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:   File "/app/.heroku/python/lib/python3.9/site-packages/pymongo/auth.py", line 333, in _authenticate_scram
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:     res = sock_info.command(source, cmd)
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:   File "/app/.heroku/python/lib/python3.9/site-packages/pymongo/pool.py", line 710, in command
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:     return command(self, dbname, spec, secondary_ok,
+2021-09-18T06:27:20.537615+00:00 app[worker.1]:   File "/app/.heroku/python/lib/python3.9/site-packages/pymongo/network.py", line 158, in command
+2021-09-18T06:27:20.537616+00:00 app[worker.1]:     helpers._check_command_response(
+2021-09-18T06:27:20.537616+00:00 app[worker.1]:   File "/app/.heroku/python/lib/python3.9/site-packages/pymongo/helpers.py", line 167, in _check_command_response
+2021-09-18T06:27:20.537630+00:00 app[worker.1]:     raise OperationFailure(errmsg, code, response, max_wire_version)
+2021-09-18T06:27:20.537631+00:00 app[worker.1]: pymongo.errors.OperationFailure: bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
